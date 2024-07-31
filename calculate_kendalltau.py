@@ -33,14 +33,18 @@ if __name__ == "__main__":
     # Plotting
     plt.figure(figsize=(12, 8))
 
+    kendalls_tau_sorted, _, _, _ = bootstrap_kendall_tau(Eclipse, DL)
+    kendalls_tau_sorted = np.sort(kendalls_tau_sorted)
+    cdf = np.arange(1, len(kendalls_tau_sorted) + 1) / len(kendalls_tau_sorted)
+
     # Plot the CDF for all comparisons in one plot with assigned colors
     plt.plot(kendalls_tau_sorted, cdf, marker='.', linestyle='none', color='orange', label='Eclipse vs DL')
-    plt.plot(kendalls_tau_sorted_r01, cdf_r01, marker='.', linestyle='none', color='blue', label='Eclipse vs R01')
-    plt.plot(kendalls_tau_sorted_r02, cdf_r02, marker='.', linestyle='none', color='purple', label='Eclipse vs R02')
-    plt.plot(kendalls_tau_sorted_r03, cdf_r03, marker='.', linestyle='none', color='red', label='Eclipse vs R03')
-    plt.plot(kendalls_tau_sorted_r04, cdf_r04, marker='.', linestyle='none', color='pink', label='Eclipse vs R04')
+    #plt.plot(kendalls_tau_sorted_r01, cdf_r01, marker='.', linestyle='none', color='blue', label='Eclipse vs R01')
+    #plt.plot(kendalls_tau_sorted_r02, cdf_r02, marker='.', linestyle='none', color='purple', label='Eclipse vs R02')
+    #plt.plot(kendalls_tau_sorted_r03, cdf_r03, marker='.', linestyle='none', color='red', label='Eclipse vs R03')
+    #plt.plot(kendalls_tau_sorted_r04, cdf_r04, marker='.', linestyle='none', color='pink', label='Eclipse vs R04')
 
-    plt.xlim(min_tau_dl, max_tau_dl)
+    #plt.xlim(min_tau_dl, max_tau_dl)
 
     plt.title('Cumulative Distribution of Kendall\'s Tau Values\n(Eclipse vs Predictions from Bootstrapping)')
     plt.xlabel('Kendall\'s Tau Value')
@@ -51,6 +55,7 @@ if __name__ == "__main__":
 
     plt.show()
 
+    """
     # Redefine vectors
     Eclipse = [1, 2, 3, 4, 2, 1, 3, 4, 2, 3, 4, 1, 4, 1, 3, 2, 3, 2, 1, 4, 4, 1, 3, 2, 1, 3, 2, 4, 2, 3, 1, 4, 1, 3, 2, 4, 4, 1, 3, 2, 3, 1, 4, 2, 1, 3, 2, 4, 3, 4, 2, 1]
     A_DOSER_PRIO = [1, 2, 3, 4, 2, 3, 1, 4, 1, 4, 2, 3, 4, 3, 1, 2, 3, 4, 2, 1, 3, 4, 1, 2, 1, 4, 2, 3, 4, 2, 3, 1, 2, 1, 3, 4, 1, 3, 2, 4, 2, 1, 4, 3, 3, 4, 1, 2, 1, 4, 2, 3]
@@ -122,3 +127,4 @@ if __name__ == "__main__":
     plt.tight_layout()
 
     plt.show()
+    """

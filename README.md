@@ -2,7 +2,7 @@
 
 This repository includes code accompanying our CaPTion@MICCAI 2024 paper on Automated Dosimetric Segmentation Ranking.
 
-![figure-one.png](images%2Ffigure-one.png)
+![figure-one.png](images/figure-two.png)
 
 Normalized Distance-based Performance Measure (NDPM) visualization with scaled distance lengths representing value: (a) NDPM compared to Eclipse (ground truth) with a scaled distance of 0.75 (b) Cross-references between Auto- DoseRank and the radiation oncologists with scaled distance of 1. Note: RO1 vs RO4 shown with a dotted line; black continuous line indicates correct scale.
 
