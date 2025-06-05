@@ -405,5 +405,5 @@ if __name__ == "__main__":
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig("images/figure_3.png", dpi=300)
+    plt.savefig("src/images/figure_3.png", dpi=300)
     plt.close()

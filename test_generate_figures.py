@@ -7,7 +7,7 @@ import glob
 class TestGenerateFigures(unittest.TestCase):
     def test_generate_figure_scripts(self):
         # Adjust the pattern to match your script naming convention and directory
-        script_pattern = os.path.join("generate_figure_*.py")
+        script_pattern = os.path.join("src/generate_figure_*.py")
         scripts = glob.glob(script_pattern)
         self.assertTrue(scripts, f"No scripts found matching pattern: {script_pattern}")
         for script in scripts:
