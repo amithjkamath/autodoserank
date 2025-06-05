@@ -16,7 +16,7 @@ Read the paper [here](https://link.springer.com/chapter/10.1007/978-3-031-73376-
 
 AutoDoseRank is a deep learning-based framework for ranking multiple tumor segmentation candidates based on **dosimetric quality**, rather than conventional geometric metrics like Dice. This is motivated by the fact that minor changes in segmentation geometry can have significant downstream effects on radiotherapy dose distributions, impacting tumor control and healthy tissue toxicity.
 
-![figure-one.png](images/figure-two.png)
+![figure-two.png](src/images/figure-two.png)
 
 AutoDoseRank consists of:
 - A deep learning-based **dose prediction model** that estimates 3D dose distributions for given segmentations.
